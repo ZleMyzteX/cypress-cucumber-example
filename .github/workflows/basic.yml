@@ -4,16 +4,16 @@ jobs:
   cypress-run:
     runs-on: ubuntu-20.04
     steps:
-      - name: Checkout
+      - name: checkout
         uses: actions/checkout@v2
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
-      - name: Cypress run
+      - name: run cypress
         uses: cypress-io/github-action@v2
         with:
           working-directory: todomvc-typescript-react
           install-command: npm install
           build: npm run build
           start: npm start
-      - name: Generate report
+      - name: get report
         run: cd todomvc-typescript-react && npm run cy:report
