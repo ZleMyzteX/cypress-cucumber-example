@@ -17,5 +17,3 @@ jobs:
           install-command: npm install
           build: npm run build
           start: npm start
-      - name: get report
-        run: cd todomvc-typescript-react && npm run cy:report
